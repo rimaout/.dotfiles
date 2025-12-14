@@ -1,7 +1,7 @@
 theme = Tokyonight Storm
 
 # Font
-font-family = Cascadia Code PL
+font-family = "CaskaydiaCove Nerd Font Mono"
 bold-is-bright = true
 font-size = 16
 
