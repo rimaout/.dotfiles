@@ -1,3 +1,8 @@
 .DS_Store
 nvim/.config/nvim/lazy-lock.json
 fish/.config/fish/fish_variables
+fish/.config/fish/fish_variables
+fish/.config/fish/fish_variables
+fish/.config/fish/conf.d/fish_frozen_key_bindings.fish
+fish/.config/fish/conf.d/fish_frozen_theme.fish
+fish/.config/fish/fish_variables

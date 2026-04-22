@@ -15,8 +15,10 @@ alias ..="cd .."
 alias ls="eza --icons"
 alias omp="/opt/homebrew/opt/llvm/bin/clang -Xpreprocessor -fopenmp -I/opt/homebrew/opt/libomp/include -L/opt/homebrew/opt/libomp/lib -lomp"
 
-#SML path
-set PATH "/usr/local/smlnj/bin/" $PATH
+#Paths
+set PATH "/usr/local/smlnj/bin/" $PATH       #SML
+set PATH "~/.local/share/bob/nvim-bin" $PATH #BOB (nvim version manager)
+set -gx PATH $HOME/.ghcup/bin $PATH          # Add GHCup to PATH for Haskell tools
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!

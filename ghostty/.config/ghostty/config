@@ -1,3 +1,4 @@
+command = /opt/homebrew/bin/fish --login --interactive
 theme = Tokyonight Storm
 
 # Font
