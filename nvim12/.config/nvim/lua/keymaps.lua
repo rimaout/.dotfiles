@@ -41,6 +41,18 @@ vim.keymap.set('n', '<C-k>', '<C-w><C-k>', { desc = 'Move focus to the upper win
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
+
+---- Incremental node selection ----
+
+-- Initialize selection with <Enter> (Normal mode)
+vim.keymap.set('n', '<CR>', 'van', { remap = true, desc = "Init node selection" })
+
+-- Increment selection with <Enter> (Visual mode)
+vim.keymap.set('x', '<CR>', 'an', { remap = true, desc = "Increment node selection" })
+
+-- Decrement selection with <Backspace> (Visual mode)
+vim.keymap.set('x', '<BS>', 'in', { remap = true, desc = "Decrement node selection" })
+
 -------------- EXPERIMENTAl (i don't know what are they for) ----------------
 
 -- Diagnostic keymaps
