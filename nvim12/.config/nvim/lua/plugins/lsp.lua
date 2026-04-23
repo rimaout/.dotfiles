@@ -27,6 +27,7 @@ require('mason-tool-installer').setup({
         "gopls",         -- go language server
 
         "bashls",        -- bash language server
+        "shfmt",         -- shell formatter
 
         "tinymist",      -- typst language server
 
@@ -34,15 +35,12 @@ require('mason-tool-installer').setup({
         -- HLS requires an exact match with the GHC compiler version of your project.
         -- It is much more stable to manage both GHC and HLS system-wide using GHCup.
         -- To install and manage them, open a terminal and run: `ghcup tui`
-        -- "hls",
+        -- "hls",       -- haskell language server
+        "ormolu"        -- haskell code formatter 
     }
 })
 
 ---- KEYMAPS ----
-
--- Formating
-vim.keymap.set('n', '<leader>fr', vim.lsp.buf.format, { desc = "[F]o[R]mat the code in the current file" })
-vim.keymap.set('v', '<leader>fr', vim.lsp.buf.format, { desc = "[F]o[R]mat the highlighted code" })
 
 -- Diagnostics
 vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action,   { desc = "Open [C]ode [A]action" })
@@ -57,7 +55,7 @@ vim.keymap.set('n', 'gd',         require('telescope.builtin').lsp_definitions, 
 
 ---- Per Language Configuration ----
 
--- 1. Configure Lua
+------ Lua -----
 vim.lsp.config('lua_ls', {
     settings = {
         Lua = {
@@ -83,7 +81,8 @@ vim.lsp.config('lua_ls', {
 -- Enable Lua Server
 vim.lsp.enable('lua_ls')
 
--- 2. Configure Haskell
+----- Haskell ------
+
 -- Tell Neovim to use the system-level HLS (from GHCup)
 vim.lsp.config('hls', {
     filetypes = { 'haskell', 'lhaskell', 'cabal' },
