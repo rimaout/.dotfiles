@@ -41,3 +41,15 @@ vim.api.nvim_create_autocmd("FileType", {
         vim.opt_local.spell = true
     end,
 })
+
+-- Use 2-space indentation for Haskell buffers
+vim.api.nvim_create_autocmd("FileType", {
+    group = augroup,
+    pattern = { "haskell", "lhaskell" },
+    callback = function()
+        vim.opt_local.expandtab = true
+        vim.opt_local.shiftwidth = 2
+        vim.opt_local.softtabstop = 2
+        vim.opt_local.tabstop = 2
+    end,
+})
