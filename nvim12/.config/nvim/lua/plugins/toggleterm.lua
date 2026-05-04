@@ -32,6 +32,15 @@ end
 vim.keymap.set('n', '<leader>t', Shell_toggle, { noremap = true, silent = true, desc = 'toggle [T]erminal shell' })
 vim.keymap.set('n', '<leader>g', Gitui_toggle, { noremap = true, silent = true, desc = 'toggle [G]itUI terminal' })
 
+local function interrupt_terminal()
+	local job_id = vim.b.terminal_job_id
+	if job_id then
+		vim.api.nvim_chan_send(job_id, '\003')
+	end
+end
+
+vim.keymap.set('t', '<C-c>', interrupt_terminal, { noremap = true, silent = true, desc = 'Interrupt terminal job' })
+
 -- Universal close: press Ctrl-Q in terminal mode to close any terminal
 vim.keymap.set('t', '<C-q>', function()
 	require('toggleterm').toggle_all()
