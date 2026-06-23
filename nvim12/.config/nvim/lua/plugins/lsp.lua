@@ -50,7 +50,7 @@ vim.keymap.set('n', '<leader>dn', vim.diagnostic.goto_next,  { desc = "[D]iagnos
 
 vim.keymap.set('n', '<leader>rn', vim.lsp.buf.rename, { desc = "[R]e[N]ame word under cursor across files" })
 vim.keymap.set('n', 'grr',        require('telescope.builtin').lsp_references,  { desc = '[G]oto [R]eferences' })      -- Find references for the word under your cursor.
-vim.keymap.set('n', 'gd',         require('telescope.builtin').lsp_definitions, { desc = '[G]oto [D]efifition' })      --  This is where a variable was first declared, or where a function is defined, etc. oss: To jump back, press <C-t>.
+vim.keymap.set('n', 'gd',         require('telescope.builtin').lsp_definitions, { desc = '[G]oto [D]efinition' })       --  This is where a variable was first declared, or where a function is defined, etc. oss: To jump back, press <C-t>.
 
 
 ---- Per Language Configuration ----

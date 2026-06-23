@@ -7,3 +7,6 @@ fish/.config/fish/conf.d/fish_frozen_key_bindings.fish
 fish/.config/fish/conf.d/fish_frozen_theme.fish
 fish/.config/fish/fish_variables
 ghostty/.config/ghostty/.config.un~
+nvim12/.config/nvim/nvim-pack-lock.json
+nvim11/.config/nvim/lazy-lock.json
+fish/.config/fish/fish_variables
